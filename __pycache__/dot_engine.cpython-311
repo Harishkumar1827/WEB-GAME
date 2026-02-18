@@ -1,0 +1,12 @@
+Welcome to DotLink Engine (CLI Demo)
+
+Score: 0 | Moves: 30
+    0  1  2  3  4  5
+ 0: gre yel red gre red blu
+ 1: gre gre red gre blu yel
+ 2: red yel blu blu red gre
+ 3: blu yel blu yel red blu
+ 4: blu yel blu yel blu yel
+ 5: yel yel blu yel blu gre
+
+Enter path as r,c r,c ... (or 'q' to quit):

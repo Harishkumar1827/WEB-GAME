@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>DotLink - Connect the Dots</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div id="game-container">
+        <!-- HUD Header -->
+        <header class="game-header">
+            <div class="hud-item moves-container">
+                <span class="label">MOVES</span>
+                <span id="moves-count" class="value">30</span>
+            </div>
+            <div class="hud-item level-info">
+                <span class="label">LEVEL</span>
+                <span id="level-number" class="value">1</span>
+            </div>
+            <button id="pause-btn" class="icon-btn">
+                <i data-lucide="pause"></i>
+            </button>
+        </header>
+
+        <!-- Objectives Bar -->
+        <div id="objectives-bar" class="objectives-bar">
+            <!-- Dynamically populated -->
+        </div>
+
+        <!-- Main Board -->
+        <main class="board-wrapper">
+            <div id="game-board" class="game-board">
+                <!-- Dots populated by JS -->
+                <svg id="connection-layer"></svg>
+            </div>
+        </main>
+
+        <!-- Footer / Score -->
+        <footer class="game-footer">
+            <div class="score-container">
+                <div class="score-progress">
+                    <div id="score-fill" class="score-fill"></div>
+                </div>
+                <div class="score-text">
+                    <span id="current-score">0</span>
+                    <span class="target-slash">/</span>
+                    <span id="target-score">1000</span>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Overlays -->
+        <div id="overlay" class="overlay hidden">
+            <div class="modal card">
+                <h2 id="modal-title">Level Complete!</h2>
+                <div id="modal-content"></div>
+                <div class="modal-actions">
+                    <button id="modal-btn-primary" class="btn primary">Next Level</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
